@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>ООО ПНТК «ТРАНСМАШ» — Инженерные и технологические решения</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== ШАПКА ==================== -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#hero" class="logo" aria-label="ООО ПНТК ТРАНСМАШ">
+                <img src="logo-removebg-preview.png" onerror="this.onerror=null; this.src='logo.png';" alt="ООО ПНТК ТРАНСМАШ" class="brand-logo-img">
+            </a>
+
+            <nav class="nav" id="navMenu">
+                <a href="#hero" class="nav-link active">Главная</a>
+                <a href="#about" class="nav-link">О компании</a>
+                <a href="#directions" class="nav-link">Направления</a>
+                <a href="#process" class="nav-link">Решения</a>
+                <a href="#developments" class="nav-link">Разработки</a>
+                <a href="#developments" class="nav-link">Проекты</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="header-right">
+                <button class="search-btn" aria-label="Поиск" onclick="openContactModal('Быстрый поиск')">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                </button>
+                <button class="burger" id="burgerBtn" aria-label="Открыть мобильное меню">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== 1. ГЛАВНЫЙ ЭКРАН / HERO ==================== -->
+        <section class="hero" id="hero">
+            <div class="cad-blueprint-layer"></div>
+
+            <div class="hero-bg">
+                <img src="фото1.jpg" alt="Тяговый привод и агрегаты ЖД техники" id="heroImg">
+                <div class="hero-gradient"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="company-badge"><span class="badge-dot"></span>ООО ПНТК «ТРАНСМАШ»</div>
+                    <h1 class="hero-title" id="heroTitle">Инженерные и технологические решения для транспорта и промышленности</h1>
+                    <p class="hero-subtitle" id="heroSubtitle">Разработка • проектирование • производство • внедрение</p>
+                    
+                    <div class="hero-btns">
+                        <a href="#directions" class="btn btn-blue">
+                            <span>Наши решения</span>
+                            <span class="arrow-icon">→</span>
+                        </a>
+                        <button class="btn btn-outline" onclick="openContactModal('Запрос с главного экрана')">
+                            <span>Связаться с нами</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-controls">
+                    <div class="slide-counter" id="slideCounter">01 <span>/03</span></div>
+                    <div class="slide-progress"><div class="slide-progress-bar" id="slideProgressBar"></div></div>
+                    <div class="slide-arrows">
+                        <button class="arrow-btn" onclick="prevSlide()" aria-label="Предыдущий слайд">←</button>
+                        <button class="arrow-btn" onclick="nextSlide()" aria-label="Следующий слайд">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 2. НАШИ НАПРАВЛЕНИЯ ==================== -->
+        <section class="section directions" id="directions">
+            <div class="container">
+                <div class="section-header-split reveal">
+                    <div>
+                        <span class="section-badge">Компетенции</span>
+                        <h2 class="section-title">Наши направления</h2>
+                    </div>
+                    <p class="section-intro">
+                        Мы создаём технические решения для различных отраслей транспорта и промышленности, объединяя инженерные компетенции, современные технологии и производственные возможности.
+                    </p>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Карта 1: ТРАНСПОРТ -->
+                    <div class="card-direction reveal reveal-delay-1">
+                        <div class="card-media">
+                            <div class="card-img-wrap">
+                                <img src="фото2.jpg" alt="Железнодорожный транспорт">
+                            </div>
+                            <div class="card-badge-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 15h.01M16 15h.01M7 21l2-3M17 21l-2-3"/></svg>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>ТРАНСПОРТ</h3>
+                            <p>Инженерные решения для железнодорожного, городского и специального транспорта.</p>
+                            <a href="#contacts" class="card-link" onclick="openContactModal('Направление: Транспорт')">
+                                <span>Подробнее</span>
+                                <span class="arrow-sym">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Карта 2: ПРОМЫШЛЕННОСТЬ -->
+                    <div class="card-direction reveal reveal-delay-2">
+                        <div class="card-media">
+                            <div class="card-img-wrap">
+                                <img src="фото3.jpg" alt="Промышленность и энергетика">
+                            </div>
+                            <div class="card-badge-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2"><path d="M2 20h20M5 20V8l5 4V8l5 4V4l5 4v12"/></svg>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>ПРОМЫШЛЕННОСТЬ</h3>
+                            <p>Оборудование и системы для промышленных предприятий и технологических процессов.</p>
+                            <a href="#contacts" class="card-link" onclick="openContactModal('Направление: Промышленность')">
+                                <span>Подробнее</span>
+                                <span class="arrow-sym">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Карта 3: ИНЖИНИРИНГ -->
+                    <div class="card-direction reveal reveal-delay-3">
+                        <div class="card-media">
+                            <div class="card-img-wrap">
+                                <img src="фото4.jpeg" alt="Инжиниринг и проектирование">
+                            </div>
+                            <div class="card-badge-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l-.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06-.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>ИНЖИНИРИНГ</h3>
+                            <p>Проектирование, расчёты, разработка конструкций и модернизация оборудования.</p>
+                            <a href="#contacts" class="card-link" onclick="openContactModal('Направление: Инжиниринг')">
+                                <span>Подробнее</span>
+                                <span class="arrow-sym">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Карта 4: ПРОИЗВОДСТВО -->
+                    <div class="card-direction reveal reveal-delay-4">
+                        <div class="card-media">
+                            <div class="card-img-wrap">
+                                <img src="фото 5.jpg" alt="Металлообработка и производство">
+                            </div>
+                            <div class="card-badge-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.4a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>ПРОИЗВОДСТВО</h3>
+                            <p>Изготовление деталей, узлов, агрегатов и специализированного оборудования.</p>
+                            <a href="#contacts" class="card-link" onclick="openContactModal('Направление: Производство')">
+                                <span>Подробнее</span>
+                                <span class="arrow-sym">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 3. ОТ ЗАДАЧИ ДО ГОТОВОГО РЕШЕНИЯ ==================== -->
+        <section class="section process" id="process">
+            <div class="container">
+                <div class="process-wrapper">
+                    <div class="process-intro reveal">
+                        <span class="section-badge">Этапы проекта</span>
+                        <h2>От задачи<br>до готового решения</h2>
+                        <p>Мы сопровождаем проект на всех этапах — от анализа задачи до внедрения и дальнейшей поддержки в эксплуатации.</p>
+                    </div>
+
+                    <div class="process-chain-row">
+                        <div class="step-card reveal reveal-delay-1">
+                            <div class="step-top">
+                                <div class="step-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0072FF" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                                </div>
+                                <span class="step-arrow">→</span>
+                            </div>
+                            <div class="step-num">01</div>
+                            <h4>Анализ задачи</h4>
+                            <p>Изучение требований и условий эксплуатации</p>
+                        </div>
+
+                        <div class="step-card reveal reveal-delay-2">
+                            <div class="step-top">
+                                <div class="step-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0072FF" stroke-width="2.2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                                </div>
+                                <span class="step-arrow">→</span>
+                            </div>
+                            <div class="step-num">02</div>
+                            <h4>Проектирование</h4>
+                            <p>Разработка конструкции и технических решений</p>
+                        </div>
+
+                        <div class="step-card reveal reveal-delay-3">
+                            <div class="step-top">
+                                <div class="step-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0072FF" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
+                                </div>
+                                <span class="step-arrow">→</span>
+                            </div>
+                            <div class="step-num">03</div>
+                            <h4>Расчёты</h4>
+                            <p>Проверка характеристик и моделирование</p>
+                        </div>
+
+                        <div class="step-card reveal reveal-delay-4">
+                            <div class="step-top">
+                                <div class="step-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0072FF" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                                </div>
+                                <span class="step-arrow">→</span>
+                            </div>
+                            <div class="step-num">04</div>
+                            <h4>Изготовление</h4>
+                            <p>Опытные образцы и серийный выпуск</p>
+                        </div>
+
+                        <div class="step-card reveal reveal-delay-1">
+                            <div class="step-top">
+                                <div class="step-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0072FF" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                </div>
+                                <span class="step-arrow">→</span>
+                            </div>
+                            <div class="step-num">05</div>
+                            <h4>Испытания</h4>
+                            <p>Проверка качества и стендовые тесты</p>
+                        </div>
+
+                        <div class="step-card reveal reveal-delay-2">
+                            <div class="step-top">
+                                <div class="step-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0072FF" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="16 12 12 8 8 12"/><line x1="12" y1="16" x2="12" y2="8"/></svg>
+                                </div>
+                            </div>
+                            <div class="step-num">06</div>
+                            <h4>Внедрение</h4>
+                            <p>Сопровождение на этапе эксплуатации</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. НАШИ РАЗРАБОТКИ ==================== -->
+        <section class="section developments" id="developments">
+            <div class="dev-rail-blueprint"></div>
+
+            <div class="container">
+                <div class="developments-header reveal">
+                    <div class="dev-header-text">
+                        <span class="section-badge section-badge-cyan">Каталог</span>
+                        <h2>Наши разработки</h2>
+                        <p>Собственные инженерные разработки, модернизация оборудования и создание специализированных решений для транспортной и промышленной инфраструктуры.</p>
+                    </div>
+                    <a href="#contacts" class="btn btn-outline-white" onclick="openContactModal('Каталог разработок')">
+                        <span>Перейти в раздел</span>
+                        <span class="arrow-icon">→</span>
+                    </a>
+                </div>
+
+                <div class="dev-cards-grid">
+                    <div class="dev-card reveal reveal-delay-1">
+                        <div class="dev-card-img">
+                            <img src="фото6.jpg" alt="Электромеханические приводы">
+                        </div>
+                        <div class="dev-card-body">
+                            <h4>Электромеханические приводы</h4>
+                            <p>Надёжные и эффективные решения для различных условий эксплуатации.</p>
+                            <a href="#contacts" class="dev-link" onclick="openContactModal('Разработка: Электромеханические приводы')">
+                                <span>Подробнее</span>
+                                <span class="arrow-sym">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dev-card reveal reveal-delay-2">
+                        <div class="dev-card-img">
+                            <img src="фото7.jpg" alt="Системы автоматизации и управления">
+                        </div>
+                        <div class="dev-card-body">
+                            <h4>Системы управления</h4>
+                            <p>Современные системы автоматизации и контроля технологических процессов.</p>
+                            <a href="#contacts" class="dev-link" onclick="openContactModal('Разработка: Системы управления')">
+                                <span>Подробнее</span>
+                                <span class="arrow-sym">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dev-card reveal reveal-delay-3">
+                        <div class="dev-card-img">
+                            <img src="фото 8.jpg" alt="Механические узлы и агрегаты">
+                        </div>
+                        <div class="dev-card-body">
+                            <h4>Механические узлы и агрегаты</h4>
+                            <p>Высокая точность, долговечность, адаптация под задачи заказчика.</p>
+                            <a href="#contacts" class="dev-link" onclick="openContactModal('Разработка: Механические узлы')">
+                                <span>Подробнее</span>
+                                <span class="arrow-sym">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. О КОМПАНИИ ==================== -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-img-box reveal reveal-delay-1">
+                        <img src="фото 9.jpg" alt="Инженерный корпус ПНТК Трансмаш">
+                    </div>
+
+                    <div class="about-info reveal reveal-delay-2">
+                        <span class="section-badge">О предприятии</span>
+                        <h2>О компании</h2>
+                        <p class="about-lead">
+                            ПНТК «ТРАНСМАШ» — инженерно-технологическая компания, специализирующаяся на разработке, проектировании и производстве технических решений для транспорта и промышленности.
+                        </p>
+
+                        <div class="about-features">
+                            <div class="feat-item">
+                                <div class="feat-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0072FF" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                                </div>
+                                <span>Собственные разработки</span>
+                            </div>
+
+                            <div class="feat-item">
+                                <div class="feat-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0072FF" stroke-width="2.2"><path d="M2 20h20M5 20V8l5 4V8l5 4V4l5 4v12"/></svg>
+                                </div>
+                                <span>Современное производство</span>
+                            </div>
+
+                            <div class="feat-item">
+                                <div class="feat-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0072FF" stroke-width="2.2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                                </div>
+                                <span>Опытная команда</span>
+                            </div>
+
+                            <div class="feat-item">
+                                <div class="feat-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0072FF" stroke-width="2.2"><path d="M20 7h-9M14 17H5M17 12H3"/></svg>
+                                </div>
+                                <span>Индивидуальный подход</span>
+                            </div>
+                        </div>
+
+                        <a href="#contacts" class="about-link" onclick="openContactModal('О компании')">
+                            <span>Подробнее о компании</span>
+                            <span class="arrow-sym">→</span>
+                        </a>
+                    </div>
+
+                    <!-- СТАТИСТИКА: ЦИФРА НА ОДНОЙ СТРОКЕ СО ЗНАКОМ (+ / %) В ТОЧНОСТИ ПО РЕФЕРЕНСУ -->
+                    <div class="about-stats reveal reveal-delay-3">
+                        <div class="stat-box">
+                            <div class="stat-num-row">
+                                <span class="stat-val counter" data-target="5">0</span>
+                                <span class="stat-symbol">+</span>
+                            </div>
+                            <span class="stat-label">лет на рынке</span>
+                        </div>
+
+                        <div class="stat-box">
+                            <div class="stat-num-row">
+                                <span class="stat-val counter" data-target="20">0</span>
+                                <span class="stat-symbol">+</span>
+                            </div>
+                            <span class="stat-label">реализованных проектов</span>
+                        </div>
+
+                        <div class="stat-box">
+                            <div class="stat-num-row">
+                                <span class="stat-val counter" data-target="100">0</span>
+                                <span class="stat-symbol">%</span>
+                            </div>
+                            <span class="stat-label">контроль качества</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 6. CTA БАННЕР ==================== -->
+        <section class="cta-banner reveal" id="contacts">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="cta-left">
+                        <div class="cta-mail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h3>Есть техническая задача?</h3>
+                            <p>Обсудим её с нашими специалистами.</p>
+                        </div>
+                    </div>
+
+                    <div class="cta-center">
+                        <button class="btn btn-blue" onclick="openContactModal('Заявка с нижнего баннера')">
+                            <span>Отправить запрос</span>
+                            <span class="arrow-icon">→</span>
+                        </button>
+                    </div>
+
+                    <div class="cta-right">
+                        <div class="cta-contact-item">
+                            <span class="c-icon">✉️</span>
+                            <a href="mailto:tech@transmash-pntk.ru">tech@transmash-pntk.ru</a>
+                        </div>
+                        <div class="cta-contact-item">
+                            <span class="c-icon">📍</span>
+                            <span>г.Москва, Кронштадтский бульвар, д.6, корп.4, кв.219</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== ПОДВАЛ ==================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#hero" class="logo">
+                    <img src="logo-removebg-preview.png" onerror="this.onerror=null; this.src='logo.png';" alt="ООО ПНТК ТРАНСМАШ" class="brand-logo-img footer-logo-img">
+                </a>
+            </div>
+
+            <nav class="footer-nav">
+                <a href="#hero">Главная</a>
+                <a href="#about">О компании</a>
+                <a href="#directions">Направления</a>
+                <a href="#process">Решения</a>
+                <a href="#developments">Разработки</a>
+                <a href="#developments">Проекты</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+
+            <div class="footer-sub-links">
+                <a href="#contacts" onclick="openContactModal('Запрос: Новости')">Новости</a>
+                <a href="#contacts" onclick="openContactModal('Запрос: Документы')">Документы</a>
+            </div>
+
+            <div class="footer-right">
+                <a href="#hero" class="back-to-top" aria-label="Вернуться наверх">⌃</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 ООО ПНТК «ТРАНСМАШ». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== МОДАЛЬНОЕ ОКНО ==================== -->
+    <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-overlay" onclick="closeContactModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeContactModal()" aria-label="Закрыть">&times;</button>
+            
+            <div class="modal-header">
+                <h3>Заявка на консультацию</h3>
+                <p>Заполните форму, и наш инженер свяжется с вами для обсуждения задач.</p>
+            </div>
+
+            <form class="modal-form" id="leadForm">
+                <input type="hidden" id="formSubject" name="Тема_запроса" value="Общая заявка с сайта">
+
+                <div class="form-group">
+                    <label for="clientName">Ваше имя / Организация *</label>
+                    <input type="text" id="clientName" name="Имя" placeholder="ООО Компания / Иван Иванов" required>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="clientPhone">Телефон *</label>
+                        <input type="tel" id="clientPhone" name="Телефон" placeholder="+7 (900) 000-00-00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clientEmail">Email *</label>
+                        <input type="email" id="clientEmail" name="Email" placeholder="info@company.ru" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="clientMessage">Суть технической задачи / Комментарий</label>
+                    <textarea id="clientMessage" name="Сообщение" rows="3" placeholder="Опишите ваши требования..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-blue btn-block" id="submitBtn">
+                    <span>Отправить заявку</span>
+                    <span class="arrow-icon">→</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toastBox">
+        <span class="toast-icon">✓</span>
+        <span class="toast-msg" id="toastText">Заявка успешно отправлена!</span>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
